@@ -47,11 +47,21 @@ class basic(object):
 		fp = open("./files/basicItems.csv", 'w+')
 		fp.write(ans)
 		fp.close()
+	
+	@staticmethod
+	def search(keyword):
+		print "Entries Found:"
+		fp = open("./files/basicItems.csv", 'r+')
+		for line in fp:
+			l = line.split(',')[1].split('\"')[1].split(':')
+			if any(keyword in s for s in l):
+				print line,
+		fp.close()
+		
 
-
-#a = basic()
+a = basic()
+a.search("fruit")
 #a.storeFood("ddsd", "122")
 #a.readFood("jam")
 #a.deleteFood("jam")
 b = load()
-print b.items	
