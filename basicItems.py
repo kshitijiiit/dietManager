@@ -11,7 +11,7 @@ class basic(object):
 		for i in range(len(keywords)):
 			fp.write(d[i])
 			if i is not len(keywords) - 1:
-				fp.write(",")
+				fp.write(":")
 		fp.write("\",\"" + energy +"\"\n")
 		fp.close()
 

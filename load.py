@@ -17,4 +17,3 @@ class load(object):
 		self.items = items
 
 a = load()
-print a.items
